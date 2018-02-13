@@ -1,0 +1,129 @@
+// brown 694A38
+// red A61C3C
+// twitch purple 7D5BBE
+// green 698F3F
+@color-1: #698F3F;
+@color-2: darken(@color-1, 10%);
+@color-3: lighten(@color-1, 40%);
+@color-4: lighten(@color-1, 5%);
+@color-5: darken(@color-1, 25%);
+
+* {
+  font-family: 'Russo One', sans-serif;
+}
+
+body {
+  background-color: @color-1;
+}
+
+.border-r {
+  border-radius: 50px;
+}
+
+#msg {
+  color: @color-3;
+  font-family: arial;
+}
+
+// ===== JUMBOTRON =====
+
+.jumbotron {
+  background-color: @color-1;
+  padding: 15px;
+  margin-top: 30px;
+  h1 a {
+    color: @color-3;
+    &:hover {
+      text-decoration: none;
+      color: @color-2;
+    }
+  }
+}
+
+// ===== BUTTON =====
+
+#hideOfflineBtn {
+  //margin: -10px;
+  height: 42px;
+  border: 10px solid @color-2;
+  border-radius: 50px 50px 0 0;
+  background-color: @color-2;
+  color: @color-3;
+  outline: 0;
+  box-shadow: inset 0 3px 5px rgba(0,0,0, 0);
+  &:hover {
+    background-color: @color-3;
+    color: @color-2;
+    border-color: @color-3;
+  }
+}
+
+// ===== MAIN COL =====
+
+#mainRow {
+  border: 10px solid @color-2;
+  margin-bottom: 15px;
+  .border-r;
+  .streamRow {
+    margin: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: @color-4;
+    border: 5px solid transparent;
+    .border-r;
+    .img {
+      border: 5px solid transparent;
+      .border-r;
+    }
+    a {
+      text-decoration: none;
+    }
+    .nameCol {
+      font-size: 17.5px;
+    }
+  }
+  .offline, .error {
+    border-color: @color-2;
+    span {
+      color: @color-2;
+    }
+  }
+  .online, .offline {
+    a {
+      color: @color-5;
+      &:hover {
+        color: @color-2;
+      }
+    }
+    img:hover {
+      border-color: @color-3;
+    }
+  }
+  .offline {
+    .img {
+      filter: brightness(50%);
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+  }
+  .online {
+    border-color: @color-3;
+    .statusCol {
+      a {
+        color: @color-3;
+        &:hover {
+          color: @color-2;
+        }
+      }
+    }
+    .nameCol {
+      a {
+        color: @color-3;
+        &:hover {
+          color: @color-2;
+        }
+      }
+    }
+  }
+}
