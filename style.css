@@ -52,6 +52,7 @@ body {
 }
 #mainRow .streamRow .img {
   border: 5px solid transparent;
+  max-height: 130px;
   border-radius: 50px;
 }
 #mainRow .streamRow a {
